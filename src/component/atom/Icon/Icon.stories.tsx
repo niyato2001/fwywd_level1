@@ -1,15 +1,15 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
-import { Image } from '.';
+import { Icon } from '.';
 import benefitImage1 from '~/img/benefit1.png';
 
 export default {
-  component: Image,
-} as ComponentMeta<typeof Image>;
+  component: Icon,
+} as ComponentMeta<typeof Icon>;
 
-export const Default: ComponentStoryObj<typeof Image> = {
+export const Default: ComponentStoryObj<typeof Icon> = {
   args: { src: benefitImage1 },
 };
 
-export const Resize: ComponentStoryObj<typeof Image> = {
+export const Resize: ComponentStoryObj<typeof Icon> = {
   args: { src: benefitImage1, width: 100, height: 100 },
 };
