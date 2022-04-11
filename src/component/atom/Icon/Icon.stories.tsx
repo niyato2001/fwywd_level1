@@ -1,15 +1,38 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { Icon } from '.';
-import benefitImage1 from '~/img/benefit1.png';
 
 export default {
   component: Icon,
 } as ComponentMeta<typeof Icon>;
 
-export const Default: ComponentStoryObj<typeof Icon> = {
-  args: { src: benefitImage1 },
+export const Facebook: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'facebook' },
 };
 
 export const Resize: ComponentStoryObj<typeof Icon> = {
-  args: { src: benefitImage1, width: 100, height: 100 },
+  args: { type: 'facebook', size: 30 },
+};
+
+export const Twitter: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'twitter' },
+};
+
+export const Line: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'line' },
+};
+export const B: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'b' },
+};
+export const Pinterest: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'pinterest' },
+};
+
+export const Check: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'check' },
+};
+export const CheckCircle: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'checkcircle' },
+};
+export const CheckDarkCircle: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'checkdarkcircle' },
 };
