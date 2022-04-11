@@ -1,6 +1,10 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      body: ['"Yu Gothic medium"'],
+    },
+    //Google FontsにはYu Gothic medium/Yu Gothic/YuGothicは含まれないのでいれるかどうかは検討
     fontWeight: {
       light: 300,
       normal: 400,
@@ -32,7 +36,10 @@ module.exports = {
         900: '#344242',
       },
       orange: '#F2994A',
-      yellow: '#F2C94C',
+      yellow: {
+        50: '#F2C94C',
+        100: '#F7A60F',
+      },
       black: '#344242',
       white: '#FFFFFF',
     },
