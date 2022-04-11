@@ -8,3 +8,6 @@
 .highlight {
   @apply border-b-4 border-yellow-50;
 }
+.btn {
+  @apply rounded bg-gradient-to-r from-orange to-yellow-50 px-12 py-5 font-bold text-white;
+}
