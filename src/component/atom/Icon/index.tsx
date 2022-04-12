@@ -21,7 +21,7 @@ export interface IconProps {
   size?: number;
 }
 
-export const Icon: React.FC<IconProps> = ({ type, size = 50 }) => {
+export const Icon: React.FC<IconProps> = ({ type, size = 30 }) => {
   switch (type) {
     case 'facebook':
       return <Image src={facebook} alt={type} width={size} height={size} />;
