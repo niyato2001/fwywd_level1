@@ -47,3 +47,6 @@ export const ExtraLarge: ComponentStoryObj<typeof Text> = {
 export const ExtraLarge2: ComponentStoryObj<typeof Text> = {
   args: { children: <span className='text-2xl'>text-2xl</span> },
 };
+export const ExtraLarge3: ComponentStoryObj<typeof Text> = {
+  args: { children: <span className='text-3xl'>text-3xl</span> },
+};
