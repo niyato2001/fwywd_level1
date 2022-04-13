@@ -8,7 +8,7 @@ export interface TitleProps {
 
 export const Title: React.FC<TitleProps> = ({ type, lg, base }) => {
   const lgTitle = (
-    <span data-testid='title-lg' className='highlight text-xl'>
+    <span data-testid='title-lg' className='highlight text-xl font-bold'>
       {lg}
     </span>
   );
@@ -22,7 +22,7 @@ export const Title: React.FC<TitleProps> = ({ type, lg, base }) => {
         return (
           <h3>
             <span data-testid='title-border' className='highlight'>
-              <span data-testid='title-lg' className='text-xl'>
+              <span data-testid='title-lg' className='text-xl font-bold'>
                 {lg}
               </span>
               <span data-testid='title-base' className='text-base'>
