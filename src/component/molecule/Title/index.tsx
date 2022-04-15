@@ -1,14 +1,17 @@
 import React from 'react';
 
 export interface TitleProps {
-  type: 'default' | 'default-h3' | 'withbase';
+  type: 'default' | 'default-h3' | 'withbase' | 'withoutborder';
   lg: string;
-  base?: string;
+  base: string;
 }
 
 export const Title: React.FC<TitleProps> = ({ type, lg, base }) => {
   const lgTitle = (
-    <span data-testid='title-lg' className='highlight text-xl font-bold'>
+    <span
+      data-testid='title-lg'
+      className={type === 'withoutborder' ? 'text-xl font-bold' : 'highlight text-xl font-bold'}
+    >
       {lg}
     </span>
   );
@@ -33,5 +36,7 @@ export const Title: React.FC<TitleProps> = ({ type, lg, base }) => {
         );
       }
       return null;
+    case 'withoutborder':
+      return <h3>{lgTitle}</h3>;
   }
 };

@@ -18,4 +18,9 @@ export const storyList: { [key: string]: TitleProps } = {
     lg: 'Lg',
     base: 'Base',
   },
+  withoutBorder: {
+    type: 'withoutborder',
+    lg: 'Lg',
+    base: 'Base',
+  },
 };

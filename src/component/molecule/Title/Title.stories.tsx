@@ -17,3 +17,7 @@ export const DefaultH3: ComponentStoryObj<typeof Title> = {
 export const WithBase: ComponentStoryObj<typeof Title> = {
   args: storyList.withBase,
 };
+
+export const WithoutBorder: ComponentStoryObj<typeof Title> = {
+  args: storyList.withoutBorder,
+};

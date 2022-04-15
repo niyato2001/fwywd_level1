@@ -63,4 +63,23 @@ describe('component/molecule/Title', () => {
       expect(screen.getByTestId('title-border')).toHaveClass('highlight');
     });
   });
+  describe('WithoutBorder', () => {
+    it('Lgテキストが表示されること', () => {
+      render(<Title {...storyList.withoutBorder} />);
+      expect(screen.getByTestId('title-lg')).toHaveTextContent(storyList.default.lg);
+    });
+    it('Lgテキストのサイズが正しく表示されること', () => {
+      render(<Title {...storyList.withoutBorder} />);
+      expect(screen.getByTestId('title-lg')).toHaveClass('text-xl');
+    });
+    it('Baseテキストが表示されないこと', () => {
+      render(<Title {...storyList.withoutBorder} />);
+      expect(screen.queryByTestId('title-base')).not.toBeInTheDocument();
+    });
+
+    it('下線が表示されないこと', () => {
+      render(<Title {...storyList.withoutBorder} />);
+      expect(screen.queryByTestId('title-lg')).not.toHaveClass('highlight');
+    });
+  });
 });
