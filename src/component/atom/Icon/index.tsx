@@ -1,4 +1,5 @@
 import { Image } from '@/component/atom/Image';
+import arrow from '~/icon/Arrow.png';
 import b from '~/icon/B.png';
 import check from '~/icon/Check.png';
 import checkcircle from '~/icon/Checkcircle.png';
@@ -17,7 +18,8 @@ export interface IconProps {
     | 'pinterest'
     | 'check'
     | 'checkcircle'
-    | 'checkdarkcircle';
+    | 'checkdarkcircle'
+    | 'arrow';
   size?: number;
 }
 
@@ -39,5 +41,7 @@ export const Icon: React.FC<IconProps> = ({ type, size = 30 }) => {
       return <Image src={checkcircle} alt={type} width={size} height={size} />;
     case 'checkdarkcircle':
       return <Image src={checkdarkcircle} alt={type} width={size} height={size} />;
+    case 'arrow':
+      return <Image src={arrow} alt={type} width={size} height={size} />;
   }
 };

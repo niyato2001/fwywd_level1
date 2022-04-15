@@ -36,3 +36,6 @@ export const CheckCircle: ComponentStoryObj<typeof Icon> = {
 export const CheckDarkCircle: ComponentStoryObj<typeof Icon> = {
   args: { type: 'checkdarkcircle' },
 };
+export const Arrow: ComponentStoryObj<typeof Icon> = {
+  args: { type: 'arrow' },
+};
