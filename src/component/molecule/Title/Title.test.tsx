@@ -72,11 +72,14 @@ describe('component/molecule/Title', () => {
       render(<Title {...storyList.withoutBorder} />);
       expect(screen.getByTestId('title-lg')).toHaveClass('text-xl');
     });
-    it('Baseテキストが表示されないこと', () => {
+    it('Baseテキストが表示されること', () => {
       render(<Title {...storyList.withoutBorder} />);
-      expect(screen.queryByTestId('title-base')).not.toBeInTheDocument();
+      expect(screen.getByTestId('title-base')).toHaveTextContent(storyList.withoutBorder.base);
     });
-
+    it('Baseテキストのサイズが正しく表示されること', () => {
+      render(<Title {...storyList.withoutBorder} />);
+      expect(screen.getByTestId('title-base')).toHaveClass('text-base');
+    });
     it('下線が表示されないこと', () => {
       render(<Title {...storyList.withoutBorder} />);
       expect(screen.queryByTestId('title-lg')).not.toHaveClass('highlight');
