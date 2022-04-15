@@ -11,10 +11,12 @@ export interface SympathyCardProps {
 export const SympathyCard: React.FC<SympathyCardProps> = ({ tag, title, image, text }) => (
   <div className='flex max-w-md flex-col gap-3 rounded pb-12 shadow-md shadow-primary-200'>
     {tag ? (
-      <div data-testid='sympathycard-tag' className=''>
-        <span className='tag'>{tag}</span>
-      </div>
-    ) : null}
+      <span data-testid='sympathycard-tag' className='tag'>
+        {tag}
+      </span>
+    ) : (
+      <div className='h-4'></div>
+    )}
     <div data-testid='sympathycard-title' className='mx-auto text-primary-800'>
       <Title {...title} />
     </div>
