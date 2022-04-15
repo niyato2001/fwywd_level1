@@ -44,6 +44,7 @@ module.exports = {
       white: '#FFFFFF',
     },
     fontSize: {
+      '2xs': '0.625rem',
       xs: '0.875rem',
       sm: '1rem',
       base: '1.5rem',
