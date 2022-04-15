@@ -25,7 +25,7 @@ describe('component/molecule/Title', () => {
   describe('DefaultH3', () => {
     it('Lgテキストが表示されること', () => {
       render(<Title {...storyList.defaultH3} />);
-      expect(screen.getByTestId('title-lg')).toHaveTextContent(storyList.default.lg);
+      expect(screen.getByTestId('title-lg')).toHaveTextContent(storyList.defaultH3.lg);
     });
     it('Lgテキストのサイズが正しく表示されること', () => {
       render(<Title {...storyList.defaultH3} />);
@@ -66,7 +66,7 @@ describe('component/molecule/Title', () => {
   describe('WithoutBorder', () => {
     it('Lgテキストが表示されること', () => {
       render(<Title {...storyList.withoutBorder} />);
-      expect(screen.getByTestId('title-lg')).toHaveTextContent(storyList.default.lg);
+      expect(screen.getByTestId('title-lg')).toHaveTextContent(storyList.withoutBorder.lg);
     });
     it('Lgテキストのサイズが正しく表示されること', () => {
       render(<Title {...storyList.withoutBorder} />);
