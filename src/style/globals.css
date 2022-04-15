@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .tag {
-  @apply bg-primary-800 px-5 py-1 text-white;
+  @apply w-20 bg-primary-800 px-5 py-1 text-center text-white;
 }
 .highlight {
   @apply border-b-4 border-yellow-50;
