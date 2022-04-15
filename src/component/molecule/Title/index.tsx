@@ -3,7 +3,7 @@ import React from 'react';
 export interface TitleProps {
   type: 'default' | 'default-h3' | 'withbase';
   lg: string;
-  base: string;
+  base?: string;
 }
 
 export const Title: React.FC<TitleProps> = ({ type, lg, base }) => {
