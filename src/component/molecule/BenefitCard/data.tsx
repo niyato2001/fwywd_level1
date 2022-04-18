@@ -5,7 +5,7 @@ export const storyList: { [key: string]: BenefitCardProps } = {
   default: {
     word: 'Word',
     icon: { type: 'arrow', size: 30 },
-    title: { type: 'default-h3', lg: 'Lg' },
+    title: { type: 'default-h3', lg: 'Lg', base: '' },
     image: { src: benefitImage1, alt: '', height: 315, width: 315 },
     text: 'Text',
   },
