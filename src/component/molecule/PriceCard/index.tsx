@@ -1,13 +1,12 @@
-import { Icon, IconProps } from '@/component/atom/Icon';
-import { Image, ImageProps } from '@/component/atom/Image';
+import { PriceTitleProps } from '../PriceTitle';
 import { Title, TitleProps } from '@/component/molecule/Title';
 
 export interface PriceCardProps {
-  word: string;
-  icon: IconProps;
   title: TitleProps;
-  image: ImageProps;
-  text: string;
+  text1: string;
+  text2: string;
+  price1: PriceTitleProps;
+  price2: PriceTitleProps;
 }
 
 export const PriceCard: React.FC<PriceCardProps> = ({ word, icon, title, image, text }) => (

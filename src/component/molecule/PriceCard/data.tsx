@@ -1,11 +1,24 @@
 import { PriceCardProps } from '.';
-import check from '~/icon/Check.png';
-import checkCircle from '~/icon/Checkcircle.png';
-import checkDarkCircle from '~/icon/Checkdarkcircle.png';
 
 export const storyList: { [key: string]: PriceCardProps } = {
-  default: {
-    title: { type: 'default-h3', lg: 'Lg', base: 'Base' },
-    text: 'Text',
+  white: {
+    title: { type: 'withoutborder', lg: 'Lg', base: 'Base' },
+    text1: 'Text1',
+    text2: 'Text2',
+    price1: {
+      type: 'default',
+      time: '月額',
+      price: '3,000',
+      currency: '円',
+      tax: '税込',
+    },
+    price2: {
+      type: 'detail',
+      item: '機材',
+      time: '月額',
+      price: '3,000',
+      currency: '円',
+      tax: '税込3,300円',
+    },
   },
 };
