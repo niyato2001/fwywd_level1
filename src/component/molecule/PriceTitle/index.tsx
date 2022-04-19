@@ -20,7 +20,7 @@ export const PriceTitle: React.FC<PriceTitleProps> = ({
   switch (type) {
     case 'detail':
       return (
-        <div className='max-w-[350px]'>
+        <div className='max-w-[350px] font-bold'>
           <div className='flex justify-between'>
             <div data-testid='pricetitle-item' className='text-base'>
               {item}
@@ -44,7 +44,7 @@ export const PriceTitle: React.FC<PriceTitleProps> = ({
       );
     case 'default':
       return (
-        <div className='max-w-sm text-center'>
+        <div className='max-w-sm text-center font-bold'>
           <span data-testid='pricetitle-time' className='mx-1 text-base'>
             {time}
           </span>
