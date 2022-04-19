@@ -6,6 +6,9 @@ export default {
   component: PriceCard,
 } as ComponentMeta<typeof PriceCard>;
 
-export const Default: ComponentStoryObj<typeof PriceCard> = {
-  args: storyList.default,
+export const White: ComponentStoryObj<typeof PriceCard> = {
+  args: storyList.white,
+};
+export const Green: ComponentStoryObj<typeof PriceCard> = {
+  args: storyList.green,
 };

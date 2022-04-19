@@ -3,27 +3,68 @@ import { storyList } from './data';
 import { PriceCard } from '.';
 
 describe('component/molecule/PriceCard', () => {
-  describe('Default', () => {
-    it('ワードが正しく表示されること', () => {
-      render(<PriceCard {...storyList.default} />);
-      expect(screen.getByTestId('benefitcard-word')).toHaveTextContent(storyList.default.word);
-    });
-    it('アイコンが表示されること', () => {
-      render(<PriceCard {...storyList.default} />);
-      expect(screen.getByTestId('benefitcard-icon')).toBeInTheDocument();
-    });
+  describe('White', () => {
     it('タイトルが表示されること', () => {
-      render(<PriceCard {...storyList.default} />);
-      expect(screen.getByTestId('benefitcard-title')).toBeInTheDocument();
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-title')).toBeInTheDocument();
+    });
+    it('テキスト1が正しく表示されること', () => {
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-text1')).toHaveTextContent(storyList.white.text1);
+    });
+    it('テキスト2が正しく表示されること', () => {
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-text2')).toHaveTextContent(storyList.white.text2);
     });
 
-    it('imageが表示されること', () => {
-      render(<PriceCard {...storyList.default} />);
-      expect(screen.getByTestId('benefitcard-image')).toBeInTheDocument();
+    it('値段総額が表示されること', () => {
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-price1')).toBeInTheDocument();
     });
-    it('テキストが表示されること', () => {
-      render(<PriceCard {...storyList.default} />);
-      expect(screen.getByTestId('benefitcard-text')).toHaveTextContent(storyList.default.text);
+
+    it('値段個別が表示されること', () => {
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-price2')).toBeInTheDocument();
+    });
+    it('チェック1が表示されること', () => {
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-check1')).toBeInTheDocument();
+    });
+    it('チェック2が表示されること', () => {
+      render(<PriceCard {...storyList.white} />);
+      expect(screen.getByTestId('pricecard-check1')).toBeInTheDocument();
+    });
+  });
+  describe('Green', () => {
+    it('タイトルが表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-title')).toBeInTheDocument();
+    });
+    it('テキスト1が正しく表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-text1')).toHaveTextContent(storyList.green.text1);
+    });
+    it('テキスト2が正しく表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-text2')).toHaveTextContent(storyList.green.text2);
+    });
+
+    it('値段総額が表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-price1')).toBeInTheDocument();
+    });
+
+    it('値段個別が表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-price2')).toBeInTheDocument();
+    });
+    it('チェック1が表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-check1')).toBeInTheDocument();
+    });
+    it('チェック2が表示されること', () => {
+      render(<PriceCard {...storyList.green} />);
+      expect(screen.getByTestId('pricecard-check1')).toBeInTheDocument();
     });
   });
 });
