@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .tag {
-  @apply bg-primary-800 px-5 py-1 text-white;
+  @apply w-20 bg-primary-800 px-5 py-1 text-center text-white;
 }
 .highlight {
   @apply border-b-4 border-yellow-50;
 }
 .btn {
-  @apply rounded bg-gradient-to-r from-orange to-yellow-50 px-12 py-5 font-bold text-white;
+  @apply rounded bg-gradient-to-r from-orange to-yellow-50 px-12 py-5 text-base font-bold text-white hover:opacity-75 focus:outline-none;
 }
