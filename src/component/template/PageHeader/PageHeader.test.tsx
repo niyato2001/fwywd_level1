@@ -6,11 +6,11 @@ describe('component/template/PageHeader', () => {
   describe('Default', () => {
     it('ロゴが表示されること', () => {
       render(<PageHeader {...storyList.default} />);
-      expect(screen.getByTestId('pageheader-logo')).toBeInTheDocument();
+      expect(screen.getByRole('img', { name: 'logo' })).toBeInTheDocument();
     });
     it('ロゴのリンクが正しいこと', () => {
       render(<PageHeader {...storyList.default} />);
-      expect(screen.getByTestId('pageheader-logo')).toHaveAttribute(
+      expect(screen.getByRole('link', { name: 'logo' })).toHaveAttribute(
         'href',
         storyList.default.icon.link,
       );
