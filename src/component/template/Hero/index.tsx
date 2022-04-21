@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { storyList } from './data';
 import { Image, ImageProps } from '@/component/atom/Image';
 
 export interface HeroProps {
@@ -12,7 +13,12 @@ export interface HeroProps {
   button: { text: string; link: string };
 }
 
-export const Hero: React.FC<HeroProps> = ({
+export const Hero: React.FC = () => {
+  const data = storyList.default;
+  return <HeroPresenter {...data} />;
+};
+
+export const HeroPresenter: React.FC<HeroProps> = ({
   title,
   subtitle,
   image,
@@ -25,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({
     <div className='absolute flex items-center'>
       <Image {...image} />
     </div>
-    <div className='ml-20 mt-36 mb-44 flex flex-col justify-start gap-24'>
+    <div className='z-10 ml-20 mt-36 mb-44 flex flex-col justify-start gap-24'>
       <div className='max-w-xl text-gray-900'>
         <h1 className='text-3xl' data-testid='hero-title'>
           {title}

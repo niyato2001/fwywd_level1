@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { storyList } from './data';
-import { Hero } from '.';
+import { HeroPresenter } from '.';
 
 export default {
-  component: Hero,
-} as ComponentMeta<typeof Hero>;
+  component: HeroPresenter,
+} as ComponentMeta<typeof HeroPresenter>;
 
-export const Default: ComponentStoryObj<typeof Hero> = {
+export const Default: ComponentStoryObj<typeof HeroPresenter> = {
   args: storyList.default,
 };
