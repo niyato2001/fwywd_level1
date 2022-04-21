@@ -1,4 +1,5 @@
 import React from 'react';
+import { storyList } from './data';
 import { Image, ImageProps } from '@/component/atom/Image';
 import { Sns, SnsProps } from '@/component/molecule/Sns';
 
@@ -16,8 +17,19 @@ export interface PageFooterProps {
   text2: string;
 }
 
-export const PageFooter: React.FC<PageFooterProps> = ({ logo, text1, sns, footerList, text2 }) => (
-  <div className='flex max-w-full flex-col gap-12 bg-primary-800 p-12 text-base text-white'>
+export const PageFooter: React.FC = () => {
+  const data = storyList.default;
+  return <PageFooterPresenter {...data} />;
+};
+
+export const PageFooterPresenter: React.FC<PageFooterProps> = ({
+  logo,
+  text1,
+  sns,
+  footerList,
+  text2,
+}) => (
+  <footer className='flex max-w-full flex-col gap-12 bg-primary-800 p-12 text-base text-white'>
     <div className='flex items-end justify-between border-b border-b-white py-2'>
       <div>
         <a href={logo.link} data-testid='pagefooter-logo' className='flex items-center'>
@@ -59,5 +71,5 @@ export const PageFooter: React.FC<PageFooterProps> = ({ logo, text1, sns, footer
     <div className='mx-auto mt-12'>
       <p data-testid='pagefooter-text2'>{text2}</p>
     </div>
-  </div>
+  </footer>
 );

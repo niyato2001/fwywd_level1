@@ -9,6 +9,7 @@ const Home: React.FC = () => (
         Welcome to Kikagaku Next.js Starter Kit!!
       </h1>
     </main>
+    <PageFooter />
   </>
 );
 
