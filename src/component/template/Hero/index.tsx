@@ -27,11 +27,9 @@ export const HeroPresenter: React.FC<HeroProps> = ({
   text2,
   button,
 }) => (
-  <div className='relative flex max-w-full bg-white font-bold'>
-    <div className='absolute flex items-center'>
-      <Image {...image} />
-    </div>
-    <div className='z-10 ml-20 mt-36 mb-44 flex flex-col justify-start gap-24'>
+  <div className='relative flex max-w-full justify-center bg-white font-bold'>
+    <Image {...image} />
+    <div className='z-10 mt-36 mb-44 mr-72 flex flex-col justify-start gap-24 pr-96'>
       <div className='max-w-xl text-gray-900'>
         <h1 className='text-3xl' data-testid='hero-title'>
           {title}
