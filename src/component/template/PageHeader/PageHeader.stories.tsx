@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { storyList } from './data';
-import { PageHeader } from '.';
+import { PageHeaderPresenter } from '.';
 
 export default {
-  component: PageHeader,
-} as ComponentMeta<typeof PageHeader>;
+  component: PageHeaderPresenter,
+} as ComponentMeta<typeof PageHeaderPresenter>;
 
-export const Default: ComponentStoryObj<typeof PageHeader> = {
+export const Default: ComponentStoryObj<typeof PageHeaderPresenter> = {
   args: storyList.default,
 };
