@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Image, ImageProps } from '@/component/atom/Image';
 
@@ -16,9 +17,11 @@ export interface PageHeaderProps {
 export const PageHeader: React.FC<PageHeaderProps> = ({ icon, navList, button }) => (
   <div className='flex max-w-full items-center justify-between bg-primary-800 font-bold text-white'>
     <div className=' pl-12 hover:opacity-75'>
-      <a href={icon.link} data-testid='pageheader-logo' className='flex items-center'>
-        <Image {...icon.image} />
-      </a>
+      <Link href={icon.link}>
+        <a data-testid='pageheader-logo' className='flex items-center'>
+          <Image {...icon.image} />
+        </a>
+      </Link>
     </div>
     <ul className='mr-[250px] flex h-[100px] flex-row'>
       {navList.map((nav, i) => (
