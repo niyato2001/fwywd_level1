@@ -5,11 +5,8 @@ import { PageHeader } from '@/component/template/PageHeader';
 const Home: React.FC = () => (
   <>
     <PageHeader />
-    <main className='mx-auto max-w-6xl py-6'>
+    <main className='max-w-full'>
       <Hero />
-      <h1 className='text-lg font-bold text-primary-800'>
-        Welcome to Kikagaku Next.js Starter Kit!!
-      </h1>
     </main>
     <PageFooter />
   </>
