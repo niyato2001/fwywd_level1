@@ -15,8 +15,8 @@ export interface PageHeaderProps {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ icon, navList, button }) => (
   <div className='flex max-w-full items-center justify-between bg-primary-800 font-bold text-white'>
-    <div className='flex items-center pl-12 hover:opacity-75'>
-      <a href={icon.link} data-testid='pageheader-logo'>
+    <div className=' pl-12 hover:opacity-75'>
+      <a href={icon.link} data-testid='pageheader-logo' className='flex items-center'>
         <Image {...icon.image} />
       </a>
     </div>
