@@ -17,9 +17,13 @@ describe('component/molecule/SympathyCard', () => {
       render(<SympathyCard {...storyList.default} />);
       expect(screen.getByTestId('sympathycard-image')).toBeInTheDocument();
     });
-    it('テキストが表示されること', () => {
+    it('テキスト1が表示されること', () => {
       render(<SympathyCard {...storyList.default} />);
-      expect(screen.getByTestId('sympathycard-text')).toHaveTextContent(storyList.default.text);
+      expect(screen.getByTestId('sympathycard-text1')).toHaveTextContent(storyList.default.text1);
+    });
+    it('テキスト2が表示されること', () => {
+      render(<SympathyCard {...storyList.default} />);
+      expect(screen.getByTestId('sympathycard-text2')).toHaveTextContent(storyList.default.text2);
     });
   });
   describe('WithoutTag', () => {
@@ -35,9 +39,17 @@ describe('component/molecule/SympathyCard', () => {
       render(<SympathyCard {...storyList.withoutTag} />);
       expect(screen.getByTestId('sympathycard-image')).toBeInTheDocument();
     });
-    it('テキストが表示されること', () => {
+    it('テキスト1が表示されること', () => {
       render(<SympathyCard {...storyList.withoutTag} />);
-      expect(screen.getByTestId('sympathycard-text')).toHaveTextContent(storyList.withoutTag.text);
+      expect(screen.getByTestId('sympathycard-text1')).toHaveTextContent(
+        storyList.withoutTag.text1,
+      );
+    });
+    it('テキスト2が表示されること', () => {
+      render(<SympathyCard {...storyList.withoutTag} />);
+      expect(screen.getByTestId('sympathycard-text2')).toHaveTextContent(
+        storyList.withoutTag.text2,
+      );
     });
   });
 });
