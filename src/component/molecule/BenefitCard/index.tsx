@@ -7,11 +7,19 @@ export interface BenefitCardProps {
   icon: IconProps;
   title: TitleProps;
   image: ImageProps;
-  text: string;
+  text1: string;
+  text2: string;
 }
 
-export const BenefitCard: React.FC<BenefitCardProps> = ({ word, icon, title, image, text }) => (
-  <div className='flex max-w-md flex-col gap-3 rounded py-12 shadow-md shadow-primary-200'>
+export const BenefitCard: React.FC<BenefitCardProps> = ({
+  word,
+  icon,
+  title,
+  image,
+  text1,
+  text2,
+}) => (
+  <div className='flex w-[500px] flex-col gap-3 rounded bg-primary-50 py-12 shadow-md shadow-primary-200'>
     <span data-testid='benefitcard-word' className='mx-auto text-base text-primary-800'>
       {word}
     </span>
@@ -24,8 +32,11 @@ export const BenefitCard: React.FC<BenefitCardProps> = ({ word, icon, title, ima
     <div data-testid='benefitcard-image' className='mx-auto'>
       <Image {...image} />
     </div>
-    <p data-testid='benefitcard-text' className='mx-auto text-base text-primary-800'>
-      {text}
+    <p data-testid='benefitcard-text1' className='mx-auto text-base text-primary-800'>
+      {text1}
+    </p>
+    <p data-testid='benefitcard-text2' className='mx-auto text-base text-primary-800'>
+      {text2}
     </p>
   </div>
 );
