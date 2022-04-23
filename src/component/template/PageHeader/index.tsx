@@ -31,15 +31,15 @@ export const PageHeaderPresenter: React.FC<PageHeaderProps> = ({ icon, navList, 
         </Link>
       </div>
       <nav>
-        <ul className='table h-[100px] max-w-4xl flex-auto '>
+        <ul className='flex h-[100px] max-w-4xl flex-auto '>
           {navList.map((nav, i) => (
             <li
               key={i}
-              className='table-cell w-[150px] text-center text-base hover:border-b-4 hover:border-b-primary-100 hover:bg-primary-600'
+              className='w-[150px] text-center text-base hover:border-b-4 hover:border-b-primary-100 hover:bg-primary-600'
             >
               <Link href={nav.link}>
                 <a
-                  className='block h-full w-full py-8 text-center'
+                  className='flex h-full w-full items-center justify-center'
                   data-testid={`pageheader-nav-${i}`}
                 >
                   {nav.text}
