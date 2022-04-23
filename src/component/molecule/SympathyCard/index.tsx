@@ -10,7 +10,7 @@ export interface SympathyCardProps {
 }
 
 export const SympathyCard: React.FC<SympathyCardProps> = ({ tag, title, image, text1, text2 }) => (
-  <div className='flex w-[500px] flex-col gap-3 rounded bg-white pb-12 shadow-md shadow-primary-200'>
+  <div className='flex w-[500px] flex-col gap-8 rounded bg-white pb-12 shadow-md shadow-primary-200'>
     {tag ? (
       <span data-testid='sympathycard-tag' className='tag'>
         {tag}
@@ -24,11 +24,9 @@ export const SympathyCard: React.FC<SympathyCardProps> = ({ tag, title, image, t
     <div data-testid='sympathycard-image' className='mx-auto'>
       <Image {...image} />
     </div>
-    <p data-testid='sympathycard-text1' className='mx-auto text-base text-primary-800'>
-      {text1}
-    </p>
-    <p data-testid='sympathycard-text2' className='mx-auto text-base text-primary-800'>
-      {text2}
-    </p>
+    <div className='mx-auto text-center text-base text-primary-800'>
+      <p data-testid='sympathycard-text1'>{text1}</p>
+      <p data-testid='sympathycard-text2'>{text2}</p>
+    </div>
   </div>
 );
