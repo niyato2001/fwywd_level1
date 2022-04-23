@@ -1,4 +1,5 @@
 import { Benefit } from '@/component/template/Benefit';
+import { Cta } from '@/component/template/Cta';
 import { Hero } from '@/component/template/Hero';
 import { PageFooter } from '@/component/template/PageFooter';
 import { PageHeader } from '@/component/template/PageHeader';
@@ -13,6 +14,7 @@ const Home: React.FC = () => (
       <Sympathy />
       <Benefit />
       <Price />
+      <Cta />
     </main>
     <PageFooter />
   </>
