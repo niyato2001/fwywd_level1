@@ -5,7 +5,7 @@ import benefitImage2 from '~/img/benefit2.png';
 
 export const storyList: { [key: string]: BenefitProps } = {
   default: {
-    title: 'あながた本気でかわるために必要な2つの条件',
+    title: 'あなが本気でかわるために必要な2つの条件',
     subtitle: '成果 = モチベーション × 能力',
     image1: { src: benefitBgImage, alt: 'bg1', width: 666, height: 473 },
     image2: { src: benefitBgImage, alt: 'bg2', width: 932, height: 662 },
