@@ -36,7 +36,7 @@ export const PageFooterPresenter: React.FC<PageFooterProps> = ({
           <Image {...logo.image} />
         </a>
       </div>
-      <p className='font-bold' data-testid='pagefooter-text1'>
+      <p className='mb-2 font-bold' data-testid='pagefooter-text1'>
         {text1}
       </p>
       <div>
@@ -53,7 +53,7 @@ export const PageFooterPresenter: React.FC<PageFooterProps> = ({
         const name = `pagefooter-list-${i}`;
         //二重mapに対応するために定義
         return (
-          <ul key={i}>
+          <ul key={i} className='min-w-[300px]'>
             <li data-testid={name} className='mb-4 font-bold'>
               {list.title}
             </li>
