@@ -21,17 +21,19 @@ export const SympathyPresenter: React.FC<SympathyProps> = ({
   sympathyCard1,
   sympathyCard2,
 }) => (
-  <div className='flex max-w-full flex-col justify-center bg-white font-bold text-primary-800'>
-    <div className='z-10 my-44 flex w-full flex-col gap-12'>
+  <div className='flex max-w-full flex-col justify-center bg-primary-50 font-bold text-primary-800'>
+    <div className='my-24 flex w-full flex-col gap-12'>
       <div className='mx-auto flex flex-col gap-12 text-center'>
         <h1 className='highlight text-xl' data-testid='sympathy-title'>
           {title}
         </h1>
-        {checkList.map((check, index) => (
-          <div key={index} data-testid={`sympathy-check-${index}`}>
-            <Check {...check} />
-          </div>
-        ))}
+        <ul className='flex flex-col gap-2'>
+          {checkList.map((check, index) => (
+            <li key={index} data-testid={`sympathy-check-${index}`}>
+              <Check {...check} />
+            </li>
+          ))}
+        </ul>
       </div>
       <div className='mx-auto flex gap-24'>
         <div data-testid='sympathy-card-1'>
