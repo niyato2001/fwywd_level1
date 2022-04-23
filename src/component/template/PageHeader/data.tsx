@@ -8,11 +8,11 @@ export const storyList: { [key: string]: PageHeaderProps } = {
       link: 'https://fwywd.com/',
     },
     navList: [
-      { text: 'Text', link: '' },
-      { text: 'Text', link: '' },
-      { text: 'Text', link: '' },
-      { text: 'Text', link: '' },
+      { text: 'Top', link: '' },
+      { text: '悩み', link: '' },
+      { text: '解決策', link: '' },
+      { text: '料金', link: '' },
     ],
-    button: { text: 'Button', link: '' },
+    button: { text: '資料ダウンロード', link: 'https://forms.gle/SitjQHt4WHShaty6A' },
   },
 };
