@@ -9,6 +9,6 @@ export const storyList: { [key: string]: HeroProps } = {
     text1: '現在',
     number: 100,
     text2: '名がダウンロード',
-    button: { text: '資料ダウンロード', link: 'https://fwywd.com/awaji' },
+    button: { text: '資料ダウンロード', link: 'https://forms.gle/SitjQHt4WHShaty6A' },
   },
 };

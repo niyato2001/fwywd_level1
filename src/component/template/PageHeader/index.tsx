@@ -22,31 +22,40 @@ export const PageHeader: React.FC = () => {
 
 export const PageHeaderPresenter: React.FC<PageHeaderProps> = ({ icon, navList, button }) => (
   <header className='flex max-w-full items-center justify-between bg-primary-800 font-bold text-white'>
-    <div className=' pl-12 hover:opacity-75'>
-      <Link href={icon.link}>
-        <a data-testid='pageheader-logo' className='flex items-center'>
-          <Image {...icon.image} />
+    <div className='flex items-center gap-24'>
+      <div className=' pl-12 hover:opacity-75'>
+        <Link href={icon.link}>
+          <a data-testid='pageheader-logo' className='flex items-center'>
+            <Image {...icon.image} />
+          </a>
+        </Link>
+      </div>
+      <nav>
+        <ul className='flex h-[100px] max-w-4xl flex-auto '>
+          {navList.map((nav, i) => (
+            <li
+              key={i}
+              className='w-[150px] text-center text-base hover:border-b-4 hover:border-b-primary-100 hover:bg-primary-600'
+            >
+              <Link href={nav.link}>
+                <a
+                  className='flex h-full w-full items-center justify-center'
+                  data-testid={`pageheader-nav-${i}`}
+                >
+                  {nav.text}
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+    <div className='my-3 mr-12 flex items-center'>
+      <Link href={button.link}>
+        <a className='btn' data-testid='pageheader-button'>
+          {button.text}
         </a>
       </Link>
-    </div>
-    <nav>
-      <ul className='mr-[250px] flex h-[100px] flex-row'>
-        {navList.map((nav, i) => (
-          <li
-            key={i}
-            className='flex w-[150px] items-center justify-center text-base hover:border-b-4 hover:border-b-primary-100 hover:bg-primary-600'
-          >
-            <a href={nav.link} data-testid={`pageheader-nav-${i}`}>
-              {nav.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-    <div className='btn my-3 mr-12 flex items-center'>
-      <a href={button.link} data-testid='pageheader-button'>
-        {button.text}
-      </a>
     </div>
   </header>
 );

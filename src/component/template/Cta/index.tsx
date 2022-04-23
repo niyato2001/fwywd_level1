@@ -17,7 +17,7 @@ export const Cta: React.FC = () => {
 };
 
 export const CtaPresenter: React.FC<CtaProps> = ({ title1, title2, title3, image, button }) => (
-  <div className='flex max-w-full items-center justify-center gap-28 bg-gradient-to-tr from-primary-800 to-primary-500 px-20 py-10 font-bold text-white'>
+  <div className='flex max-w-full items-center justify-center gap-24 bg-gradient-to-tr from-primary-800 to-primary-500 px-20 py-10 font-bold text-white'>
     <div className='flex flex-col gap-20'>
       <div className='max-w-xl'>
         <h1 className='text-3xl' data-testid='cta-title'>

@@ -26,12 +26,12 @@ export const PriceCard: React.FC<PriceCardProps> = ({
   switch (type) {
     case 'white':
       return (
-        <div className='flex max-w-[410px] flex-col divide-y-2 divide-primary-200 rounded bg-white px-7 py-12 text-primary-800 shadow-md shadow-primary-200'>
+        <div className='flex max-w-[420px] flex-col divide-y-2 divide-primary-200 rounded bg-white px-7 py-12 text-primary-800 shadow-md shadow-primary-200'>
           <div className='flex flex-col gap-3 pb-8'>
             <div data-testid='pricecard-title' className='mx-auto'>
               <Title {...title} />
             </div>
-            <div className='mx-auto text-base font-bold'>
+            <div className='mx-auto text-center text-base font-bold'>
               <p data-testid='pricecard-text1'>{text1}</p>
               <p data-testid='pricecard-text2'>{text2}</p>
             </div>
@@ -61,12 +61,12 @@ export const PriceCard: React.FC<PriceCardProps> = ({
       );
     case 'green':
       return (
-        <div className='flex max-w-[410px] flex-col divide-y-2 divide-primary-200 rounded bg-primary-800 py-12 px-7 text-white shadow-md shadow-primary-200'>
+        <div className='flex max-w-[420px] flex-col divide-y-2 divide-primary-200 rounded bg-primary-800 py-12 px-7 text-white shadow-md shadow-primary-200'>
           <div className='flex flex-col gap-3 pb-8'>
             <div data-testid='pricecard-title' className='mx-auto'>
               <Title {...title} />
             </div>
-            <div className='mx-auto text-base font-bold'>
+            <div className='mx-auto text-center text-base font-bold'>
               <p data-testid='pricecard-text1'>{text1}</p>
               <p data-testid='pricecard-text2'>{text2}</p>
             </div>

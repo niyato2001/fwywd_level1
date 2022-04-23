@@ -29,7 +29,10 @@ export const BenefitPresenter: React.FC<BenefitProps> = ({
   text1,
   text2,
 }) => (
-  <div className='relative flex max-w-full justify-center bg-white font-bold text-primary-800'>
+  <section
+    id='benefit'
+    className='relative flex max-w-full justify-center bg-white font-bold text-primary-800'
+  >
     <div className='absolute top-36 left-0 flex items-center opacity-10'>
       <Image {...image1} />
     </div>
@@ -62,5 +65,5 @@ export const BenefitPresenter: React.FC<BenefitProps> = ({
         </p>
       </div>
     </div>
-  </div>
+  </section>
 );
