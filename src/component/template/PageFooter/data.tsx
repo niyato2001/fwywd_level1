@@ -22,9 +22,9 @@ export const storyList: { [key: string]: PageFooterProps } = {
       {
         title: 'About',
         textLinkList: [
-          { text: '悩み', link: '' },
-          { text: '解決策', link: '' },
-          { text: '料金', link: '' },
+          { text: '悩み', link: '/#sympathy' },
+          { text: '解決策', link: '/#benefit' },
+          { text: '料金', link: '/#price' },
         ],
       },
       {
