@@ -7,9 +7,9 @@ export const storyList: { [key: string]: PageFooterProps } = {
       image: { src: logoImage, alt: 'logo', width: 156, height: 60 },
       link: 'https://fwywd.com/',
     },
-    text1: 'Text1',
+    text1: '良き仲間との出会いは人生最大の財産である',
     sns: {
-      text: 'Text',
+      text: 'SNSでシェア',
       icon: {
         facebook: { type: 'facebook', size: 60 },
         twitter: { type: 'twitter', size: 60 },
@@ -20,30 +20,30 @@ export const storyList: { [key: string]: PageFooterProps } = {
     },
     footerList: [
       {
-        title: 'Title',
+        title: 'About',
         textLinkList: [
-          { text: 'Text1', link: '' },
-          { text: 'Text2', link: '' },
-          { text: 'Text3', link: '' },
+          { text: '悩み', link: '' },
+          { text: '解決策', link: '' },
+          { text: '料金', link: '' },
         ],
       },
       {
-        title: 'Title',
+        title: 'Legal',
         textLinkList: [
-          { text: 'Text1', link: '' },
-          { text: 'Text2', link: '' },
-          { text: 'Text3', link: '' },
+          { text: '利用規約', link: '' },
+          { text: 'プライバシーポリシー', link: '' },
+          { text: '特定商取引法に基づく表記', link: '' },
+          { text: '運営会社', link: '' },
         ],
       },
       {
-        title: 'Title',
+        title: 'Links',
         textLinkList: [
-          { text: 'Text1', link: '' },
-          { text: 'Text2', link: '' },
-          { text: 'Text3', link: '' },
+          { text: 'メディアキット', link: '' },
+          { text: 'サイトマップ', link: '' },
         ],
       },
     ],
-    text2: 'Text2',
+    text2: '🄫 2022, KIKAGAKU.Inc., All right reserved',
   },
 };
