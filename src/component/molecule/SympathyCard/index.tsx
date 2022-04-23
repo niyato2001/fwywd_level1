@@ -10,7 +10,7 @@ export interface SympathyCardProps {
 }
 
 export const SympathyCard: React.FC<SympathyCardProps> = ({ tag, title, image, text1, text2 }) => (
-  <div className='flex max-w-md flex-col gap-3 rounded pb-12 shadow-md shadow-primary-200'>
+  <div className='flex w-[500px] flex-col gap-3 rounded bg-white pb-12 shadow-md shadow-primary-200'>
     {tag ? (
       <span data-testid='sympathycard-tag' className='tag'>
         {tag}
