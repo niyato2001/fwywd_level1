@@ -26,7 +26,7 @@ export const PriceCard: React.FC<PriceCardProps> = ({
   switch (type) {
     case 'white':
       return (
-        <div className='flex max-w-[410px] flex-col divide-y-2 divide-primary-200 rounded p-12 text-primary-800 shadow-md shadow-primary-200'>
+        <div className='flex max-w-[410px] flex-col divide-y-2 divide-primary-200 rounded bg-white px-7 py-12 text-primary-800 shadow-md shadow-primary-200'>
           <div className='flex flex-col gap-3 pb-8'>
             <div data-testid='pricecard-title' className='mx-auto'>
               <Title {...title} />
@@ -61,7 +61,7 @@ export const PriceCard: React.FC<PriceCardProps> = ({
       );
     case 'green':
       return (
-        <div className='flex max-w-[410px] flex-col divide-y-2 divide-primary-200 rounded bg-primary-800 p-12 text-white shadow-md shadow-primary-200'>
+        <div className='flex max-w-[410px] flex-col divide-y-2 divide-primary-200 rounded bg-primary-800 py-12 px-7 text-white shadow-md shadow-primary-200'>
           <div className='flex flex-col gap-3 pb-8'>
             <div data-testid='pricecard-title' className='mx-auto'>
               <Title {...title} />

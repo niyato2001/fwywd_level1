@@ -8,7 +8,7 @@ export interface CheckProps {
 }
 
 export const Check: React.FC<CheckProps> = ({ icon, text, color }) => (
-  <div className='flex max-w-xs items-center gap-4 font-bold'>
+  <div className='flex max-w-full items-center gap-4 font-bold'>
     {icon.type === 'check' ? (
       <div className='flex items-center' data-testid='check-icon'>
         <Icon {...icon} />

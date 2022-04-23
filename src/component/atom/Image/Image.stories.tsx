@@ -13,3 +13,7 @@ export const Default: ComponentStoryObj<typeof Image> = {
 export const Resize: ComponentStoryObj<typeof Image> = {
   args: { src: benefitImage1, alt: 'benefitImage1', width: 100, height: 100 },
 };
+
+export const Background: ComponentStoryObj<typeof Image> = {
+  args: { src: benefitImage1, alt: 'benefitImage1', objectFit: 'cover', layout: 'fill' },
+};

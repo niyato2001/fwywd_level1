@@ -21,9 +21,13 @@ describe('component/molecule/BenefitCard', () => {
       render(<BenefitCard {...storyList.default} />);
       expect(screen.getByTestId('benefitcard-image')).toBeInTheDocument();
     });
-    it('テキストが表示されること', () => {
+    it('テキスト1が表示されること', () => {
       render(<BenefitCard {...storyList.default} />);
-      expect(screen.getByTestId('benefitcard-text')).toHaveTextContent(storyList.default.text);
+      expect(screen.getByTestId('benefitcard-text1')).toHaveTextContent(storyList.default.text1);
+    });
+    it('テキスト2が表示されること', () => {
+      render(<BenefitCard {...storyList.default} />);
+      expect(screen.getByTestId('benefitcard-text2')).toHaveTextContent(storyList.default.text2);
     });
   });
 });
