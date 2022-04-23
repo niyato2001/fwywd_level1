@@ -7,6 +7,6 @@ export const storyList: { [key: string]: CtaProps } = {
     title2: { lg: '人生最大', base: 'の' },
     title3: { lg: '財産', base: 'である' },
     image: { src: ctaImage, alt: 'cta', width: 600, height: 600 },
-    button: { text: '資料ダウンロード', link: 'https://fwywd.com/awaji' },
+    button: { text: '資料ダウンロード', link: 'https://forms.gle/SitjQHt4WHShaty6A' },
   },
 };
