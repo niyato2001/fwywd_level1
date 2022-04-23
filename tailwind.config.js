@@ -1,8 +1,10 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      body: ['"Yu Gothic medium"'],
+      sans: ['"Yu Gothic"', ...defaultTheme.fontFamily.sans],
     },
     //Google FontsにはYu Gothic medium/Yu Gothic/YuGothicは含まれないのでいれるかどうかは検討
     fontWeight: {
