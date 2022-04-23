@@ -23,7 +23,10 @@ export const PricePresenter: React.FC<PriceProps> = ({
   priceCardList,
   checkList,
 }) => (
-  <div className='flex max-w-full flex-col justify-center bg-primary-50 font-bold text-primary-800'>
+  <section
+    id='price'
+    className='flex max-w-full flex-col justify-center bg-primary-50 font-bold text-primary-800'
+  >
     <div className='my-24 flex w-full flex-col gap-12'>
       <div className='mx-auto flex flex-col gap-12 text-center'>
         <h1 className='text-2xl' data-testid='price-title'>
@@ -53,5 +56,5 @@ export const PricePresenter: React.FC<PriceProps> = ({
         ))}
       </ul>
     </div>
-  </div>
+  </section>
 );

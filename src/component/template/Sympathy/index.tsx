@@ -21,7 +21,10 @@ export const SympathyPresenter: React.FC<SympathyProps> = ({
   sympathyCard1,
   sympathyCard2,
 }) => (
-  <div className='flex max-w-full flex-col justify-center bg-primary-50 font-bold text-primary-800'>
+  <section
+    id='sympathy'
+    className='flex max-w-full flex-col justify-center bg-primary-50 font-bold text-primary-800'
+  >
     <div className='my-24 flex w-full flex-col gap-12'>
       <div className='mx-auto flex flex-col gap-12 text-center'>
         <h1 className='highlight text-xl' data-testid='sympathy-title'>
@@ -44,5 +47,5 @@ export const SympathyPresenter: React.FC<SympathyProps> = ({
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );
