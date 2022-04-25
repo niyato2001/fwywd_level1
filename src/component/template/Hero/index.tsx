@@ -13,8 +13,13 @@ export interface HeroProps {
   button: { text: string; link: string };
 }
 
-export const Hero: React.FC = () => {
+interface Props {
+  number: number;
+}
+
+export const Hero: React.FC<Props> = (props: Props) => {
   const data = storyList.default;
+  data.number = props.number;
   return <HeroPresenter {...data} />;
 };
 

@@ -14,7 +14,7 @@ const Home: React.FC<Props> = (props: Props) => (
     <PageHeader />
     <main className='max-w-full'>
       <p>{props.num}</p>
-      <Hero />
+      <Hero number={props.num} />
       <Sympathy />
       <Benefit />
       <Price />
@@ -27,7 +27,7 @@ const Home: React.FC<Props> = (props: Props) => (
 export default Home;
 
 interface Props {
-  num: string;
+  num: number;
   children?: ReactNode;
 }
 
@@ -36,7 +36,7 @@ const gssUrl = 'https://api.steinhq.com/v1/storages/624e61c04906bb053738ccf4/she
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await axios.get(gssUrl);
   const props: Props = {
-    num: `${response.data.length}`,
+    num: response.data.length,
   };
 
   return {
