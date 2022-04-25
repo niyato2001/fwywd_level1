@@ -30,14 +30,25 @@ interface Props {
   children?: ReactNode;
 }
 
+interface GssProps {
+  タイムスタンプ?: string;
+  お名前?: string;
+  メールアドレス: string;
+  電話番号?: string;
+  プライバシーポリシーへの同意?: string;
+}
+
 const gssUrl = 'https://api.steinhq.com/v1/storages/624e61c04906bb053738ccf4/sheet1';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await axios.get(gssUrl);
+  const list = response.data.map((data: GssProps) => data['メールアドレス']);
+  //ユニーク数にするため、メールアドレスの重複を削除したuniqueListを作成
+  const set = new Set(list);
+  const uniqueList = Array.from(set);
   const props: Props = {
-    num: response.data.length,
+    num: uniqueList.length,
   };
-
   return {
     props: props,
   };
