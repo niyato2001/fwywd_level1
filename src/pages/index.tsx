@@ -13,7 +13,6 @@ const Home: React.FC<Props> = (props: Props) => (
   <>
     <PageHeader />
     <main className='max-w-full'>
-      <p>{props.num}</p>
       <Hero number={props.num} />
       <Sympathy />
       <Benefit />
